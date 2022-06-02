@@ -1,6 +1,7 @@
 package com.github.gregor499.neuefischefreitagsaufgabewoche2bestellsysteminspring;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;

@@ -1,29 +1,18 @@
 package com.github.gregor499.neuefischefreitagsaufgabewoche2bestellsysteminspring;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.UUID;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class NonFoodProduct implements Product{
 
-    private final String name;
-    private final String id;
+    private String name;
+    private final String id = UUID.randomUUID().toString();
 
-    private boolean dishwasherSafe;
-
-    public NonFoodProduct(String name) {
-        this.name = name;
-        id = UUID.randomUUID().toString();
-        dishwasherSafe=true;
+    private final boolean dishwasherSafe = true;
     }
-
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String getId() {
-        return id;
-    }
-
-}

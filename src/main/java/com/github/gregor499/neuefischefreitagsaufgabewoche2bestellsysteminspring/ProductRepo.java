@@ -1,11 +1,14 @@
 package com.github.gregor499.neuefischefreitagsaufgabewoche2bestellsysteminspring;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Repository
 public class ProductRepo {
 
     private Map<String,Product> allMyProducts = new HashMap<>();

@@ -1,19 +1,18 @@
 package com.github.gregor499.neuefischefreitagsaufgabewoche2bestellsysteminspring;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+@Service
+@RequiredArgsConstructor
 public class ShopService {
 
     private final ProductRepo myProducts;
     private final OrderRepo myOrders;
-
-    public ShopService(ProductRepo myProducts, OrderRepo myOrders) {
-        this.myProducts = myProducts;
-        this.myOrders = myOrders;
-    }
-
 
     public Product getProduct(String id){
         return myProducts.get(id).orElseThrow();
